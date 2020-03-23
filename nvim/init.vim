@@ -6,11 +6,13 @@ set rtp+=/usr/bin/fzf " local executable of fzf
 
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/airline.vim
+source ~/.config/nvim/projects.vim
 
 filetype plugin indent on
 " theme
 set termguicolors
-colorscheme onedark
+colorscheme monokai_pro
+syntax enable
 
 " line config
 set number
@@ -43,6 +45,9 @@ inoremap <silent><expr> <TAB>
     \ pumvisible() ? "\<C-n>" :
     \ <SID>check_back_space() ? "\<TAB>" :
     \ coc#refresh()
+inoremap <silent><expr> <cr> pumvisible() ?
+            \ coc#_select_confirm() :
+            \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap <silent><expr> <c-space> coc#refresh()
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -76,5 +81,8 @@ function! s:show_documentation()
         call CocAction('doHover')
     endif
 endfunction
+
+" Comandos
+:command! SrcUpdate source $HOME/.config/nvim/init.vim
 
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped

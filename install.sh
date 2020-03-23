@@ -14,6 +14,6 @@ rm -rf $HOME/.config/nvim/
 mkdir -p $NVIM_DIR/bundle/
 git clone https://github.com/VundleVim/Vundle.vim.git \
     $NVIM_DIR/bundle/Vundle.vim
-ln -s $CURRENT_DIR/nvim/{init.vim,plugins.vim,airline.vim} $NVIM_DIR
+ln -s $CURRENT_DIR/nvim/*.vim $NVIM_DIR
 nvim +PluginInstall +qall
 cd $NVIM_DIR/bundle/coc.nvim; git checkout release

@@ -4,8 +4,9 @@ call vundle#begin("~/.config/nvim/bundle")
 Plugin 'VundleVim/Vundle.vim'
 
 " language related
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'fatih/vim-go'
+Plugin 'neoclide/coc.nvim'              " se debe usar la rama RELEASE
+Plugin 'fatih/vim-go'                   " lenguaje GO
+Plugin 'rayburgemeestre/phpfolding.vim' " fold para PHP
 
 " airline
 Plugin 'vim-airline/vim-airline'
@@ -17,9 +18,15 @@ Plugin 'joshdick/onedark.vim'
 Plugin 'iCyMind/NeoSolarized'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'mhartington/oceanic-next'
+"Plugin 'sickill/vim-monokai'           " sublime colors
+Plugin 'crusoexia/vim-monokai'          " sublime colors
+Plugin 'phanviet/vim-monokai-pro'
+Plugin 'patstockwell/vim-monokai-tasty'
 
 " syntax
-Plugin 'jwalton512/vim-blade'
+Plugin 'StanAngeloff/php.vim'           " sintaxis para PHP
+Plugin 'jwalton512/vim-blade'           " sintaxis para Blade templates
+Plugin 'HerringtonDarkholme/yats.vim'   " sintaxis para Typescript
 
 " utils
 Plugin 'preservim/nerdtree'             " arbol de directorios
