@@ -12,12 +12,13 @@ filetype plugin indent on
 set termguicolors
 colorscheme onedark
 
-" line numbers
+" line config
 set number
 set relativenumber
+set cursorline
+set nowrap
 
 " tabs config
-set nowrap
 set tabstop=8
 set shiftwidth=4
 set softtabstop=0 
@@ -50,6 +51,17 @@ map <leader>e :NERDTreeToggle<CR>
 map <C-P> :Files<CR>
 " map para quitar resaltado de busqueda
 nnoremap <leader><space> :nohlsearch<CR>
+" mapeos por errores en mayus
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
 
 " Funciones
 " coc.nvim
