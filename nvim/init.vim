@@ -56,6 +56,9 @@ map <leader>e :NERDTreeToggle<CR>
 map <C-P> :Files<CR>
 " map para quitar resaltado de busqueda
 nnoremap <leader><space> :nohlsearch<CR>
+" mapeos bye buffer
+nnoremap <leader>q :Bdelete<CR>
+nnoremap <leader>Q :bufdo :Bdelete<CR>
 " mapeos por errores en mayus
 cnoreabbrev W! w!
 cnoreabbrev Q! q!

@@ -5,6 +5,7 @@ call project#rc("~/Proyectos")
 
 Project '~/Dotfiles'                            , 'Dotfiles'
 
-Project 'aws'                                   , 'Pruebas AWS'
+Project 'aws/web'                               , 'Pruebas WEB AWS'
+Project 'aws/api'                               , 'Pruebas API AWS'
 Project 'landings-generator'                    , 'Landings'
 Project 'Portales'

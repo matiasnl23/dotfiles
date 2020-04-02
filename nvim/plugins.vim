@@ -45,5 +45,6 @@ Plugin 'moll/vim-bbye'                  " utilizades con los buffers
 Plugin 'amiorin/vim-project'            " manejar proyectos
 Plugin 'ryanoasis/vim-startify'         " pantalla de inicio
 Plugin 'editorconfig/editorconfig-vim'  " leer archivo .editorconfig
+Plugin 'tpope/vim-eunuch'               " utils linux as VIM commands
 
 call vundle#end()
