@@ -1,2 +1,7 @@
+#!/bin/bash
 alias vim='nvim'
 alias nvimc='nvim ~/.config/nvim/'
+
+alias git_sura='cp $HOME/.gitconfig.sura $HOME/.gitconfig'
+alias git_cris='cp $HOME/.gitconfig.cristian $HOME/.gitconfig'
+alias git_me='cp $HOME/.gitconfig.me $HOME/.gitconfig'
