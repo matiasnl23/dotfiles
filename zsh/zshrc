@@ -84,7 +84,7 @@ plugins=(
     jsontools
     nmap
     vi-mode
-    virtualenv
+    pyenv
     zsh_reload
 )
 
@@ -121,13 +121,41 @@ export EDITOR='nvim'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 
-export PATH=$PATH:$HOME/.gem/ruby/2.7.0/bin
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$NPM_PACKAGES/bin:$PATH
+export PATH=$PATH:$HOME/.platformio/penv/bin
+export PATH=$PATH:$HOME/.pub-cache/bin
+export NPM_PACKAGES="${HOME}/.npm-packages"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+export MANPATH=$MANPATH:$NPM_PACKAGES/share/man
+export CHROME_BIN=/usr/bin/chromium
+
+[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/nvm.sh
+source /usr/share/nvm/bash_completion
+source /usr/share/nvm/install-nvm-exec
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source $HOME/.zsh_aliases
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# Set Proxy
+function set_proxy_sura() {
+    export {http,https,ftp,socks}_proxy="http://10.141.3.61:3128"
+    export {HTTP,HTTPS,FTP,SOCKS}_PROXY="$http_proxy"
+    export no_proxy="localhost,127.0.0.0/8,::1,192.168.*,webaccess.*,aradcji01.*,preproduccion_backend,produccion_backend,produccion_webinterna,10.142.*,10.141.*,*.segurossura.com.ar,172.*,wso2is.local,ssursoa*"
+}
+
+# Unset Proxy
+function unset_proxy() {
+    unset {http,https,ftp,socks,no}_proxy
+    unset {HTTP,HTTPS,FTP,SOCKS,NO}_PROXY
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
