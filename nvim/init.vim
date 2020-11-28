@@ -1,18 +1,27 @@
-set nocompatible
-filetype off
+"set nocompatible
+"filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 set rtp+=/usr/bin/fzf " local executable of fzf
 
+source ~/.config/nvim/coc.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/airline.vim
 source ~/.config/nvim/projects.vim
 
-filetype plugin indent on
+"filetype plugin indent on
 " theme
-set termguicolors
-colorscheme monokai_pro
-syntax enable
+colorscheme onehalfdark
+let g:vim_monokai_tasty_italic = 1
+syntax on
+set cursorline
+"set t_Co=256
+
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
 
 " line config
 set number
@@ -23,7 +32,7 @@ set nowrap
 " tabs config
 set tabstop=8
 set shiftwidth=4
-set softtabstop=0 
+set softtabstop=0
 set expandtab
 set smarttab
 
@@ -36,29 +45,32 @@ set updatetime=250
 set shortmess+=c        " relacionado a coc.nvim
 set signcolumn=yes      " relacionado a coc.nvim
 
+" config para snippets
+let g:coc_snippets_next = '<c-j>'
+let g:coc_snippets_prev = '<c-k>'
 " config for indentLine
 let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
 let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 
-" map por coc.nvim
-inoremap <silent><expr> <TAB>
-    \ pumvisible() ? "\<C-n>" :
-    \ <SID>check_back_space() ? "\<TAB>" :
-    \ coc#refresh()
-inoremap <silent><expr> <cr> pumvisible() ?
-            \ coc#_select_confirm() :
-            \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-inoremap <silent><expr> <c-space> coc#refresh()
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+" config for ack.vim
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+
+" Local-vimrc
+let g:localvimrc_sandbox = 0
+
 " map por nerdtree
 map <leader>e :NERDTreeToggle<CR>
 map <C-P> :Files<CR>
+map <C-S-P> :GFiles<CR>
 " map para quitar resaltado de busqueda
 nnoremap <leader><space> :nohlsearch<CR>
 " mapeos bye buffer
 nnoremap <leader>q :Bdelete<CR>
 nnoremap <leader>Q :bufdo :Bdelete<CR>
+" tagbar
+nnoremap <leader>t :TagbarToggle<CR>
 " mapeos por errores en mayus
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -70,22 +82,14 @@ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
+cnoreabbrev we We
 
 " Funciones
-" coc.nvim
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-function! s:show_documentation()
-    if (index(['vim', 'help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    else
-        call CocAction('doHover')
-    endif
-endfunction
 
 " Comandos
-:command! SrcUpdate source $HOME/.config/nvim/init.vim
+:command! Src source $HOME/.config/nvim/init.vim
 
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped
+
+" Autimatic functions
+"au BufWrite * :Autoformat
