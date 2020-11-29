@@ -2,7 +2,7 @@
 "filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
-set rtp+=/usr/bin/fzf " local executable of fzf
+set rtp+=~/.fzf/bin/fzf " local executable of fzf
 
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/plugins.vim
@@ -62,8 +62,7 @@ let g:localvimrc_sandbox = 0
 
 " map por nerdtree
 map <leader>e :NERDTreeToggle<CR>
-map <C-P> :Files<CR>
-map <C-S-P> :GFiles<CR>
+map <C-P> :GFiles<CR>
 " map para quitar resaltado de busqueda
 nnoremap <leader><space> :nohlsearch<CR>
 " mapeos bye buffer

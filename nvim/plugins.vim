@@ -55,6 +55,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'    " GIT en el arbol de directorios
 Plugin 'airblade/vim-gitgutter'         " mostrar diferencias de GIT
 Plugin 'tpope/vim-fugitive'             " complemento para GIT
 Plugin 'tpope/vim-surround'             " encerrar texto entre caracter indicado
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }               " buscador tipo CtrlP async
 Plugin 'junegunn/fzf.vim'               " buscador tipo CtrlP async
 Plugin 'mattn/emmet-vim'                " emmet for vim
 Plugin 'jiangmiao/auto-pairs'           " cerrar automaticamente ()[]{}''
