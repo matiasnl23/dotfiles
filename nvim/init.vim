@@ -1,4 +1,4 @@
-"set nocompatible
+set nocompatible
 "filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
@@ -11,7 +11,8 @@ source ~/.config/nvim/projects.vim
 
 "filetype plugin indent on
 " theme
-colorscheme onehalfdark
+"colorscheme onehalfdark
+colorscheme monokai_pro
 let g:vim_monokai_tasty_italic = 1
 syntax on
 set cursorline
@@ -69,7 +70,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <leader>q :Bdelete<CR>
 nnoremap <leader>Q :bufdo :Bdelete<CR>
 " tagbar
-nnoremap <leader>t :TagbarToggle<CR>
+" nnoremap <leader>t :TagbarToggle<CR>
 " mapeos por errores en mayus
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -82,6 +83,8 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 cnoreabbrev we We
+
+nnoremap <leader>t :FloatermToggle<CR>
 
 " Funciones
 

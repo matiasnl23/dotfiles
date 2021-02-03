@@ -9,7 +9,7 @@ Plugin 'fatih/vim-go'                                   " lenguaje GO
 Plugin 'rayburgemeestre/phpfolding.vim'                 " fold para PHP
 "Plugin 'stevearc/vim-arduino'                          " arduino
 Plugin 'coddingtonbear/neomake-platformio'              " arduino
-Plugin 'prettier/vim-prettier'                          " prettier
+"Plugin 'prettier/vim-prettier'                         " prettier
 
 " airline
 Plugin 'vim-airline/vim-airline'
@@ -33,18 +33,19 @@ Plugin 'embark-theme/vim', { 'name': 'embark' }
 Plugin 'sonph/onehalf', { 'rtp': 'vim' }
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'jacoborus/tender.vim'
+Plugin 'sainnhe/edge'
 
 " syntax
-"Plugin 'StanAngeloff/php.vim'                           " sintaxis para PHP
-"Plugin 'jwalton512/vim-blade'                           " sintaxis para Blade templates
-Plugin 'HerringtonDarkholme/yats.vim'                  " sintaxis para Typescript
+"Plugin 'StanAngeloff/php.vim'                                          " sintaxis para PHP
+"Plugin 'jwalton512/vim-blade'                                          " sintaxis para Blade templates
+Plugin 'HerringtonDarkholme/yats.vim'                                   " sintaxis para Typescript
 "Plugin 'leafgarland/typescript-vim'
-"Plugin 'pangloss/vim-javascript'                        " sintaxis para javascript
-"Plugin 'maxmellon/vim-jsx-pretty'                       " sintaxis para jsx (react)
-"Plugin 'neovimhaskell/haskell-vim'                      " sintaxis para haskell
-"Plugin 'styled-components/vim-styled-components'        " sintaxis para estilos dentro de js
-"Plugin 'elzr/vim-json'                                  " sintaxis para json
-"Plugin 'jparise/vim-graphql'                            " sintaxis para graphql
+Plugin 'pangloss/vim-javascript'                                        " sintaxis para javascript
+Plugin 'maxmellon/vim-jsx-pretty'                                       " sintaxis para jsx (react)
+"Plugin 'neovimhaskell/haskell-vim'                                     " sintaxis para haskell
+Plugin 'styled-components/vim-styled-components', { 'branch': 'main' }  " sintaxis para estilos dentro de js
+"Plugin 'elzr/vim-json'                                                 " sintaxis para json
+Plugin 'jparise/vim-graphql'                                            " sintaxis para graphql
 Plugin 'dart-lang/dart-vim-plugin'
 
 " utils
@@ -75,6 +76,7 @@ Plugin 'mileszs/ack.vim'                " to find words too
 Plugin 'preservim/tagbar'               " tagbar
 "Plugin 'ludovicchabant/vim-gutentags'  " tags
 Plugin 'tpope/vim-repeat'               " repeat
-"Plugin 'svermeulen/vim-cutlass'         " delete without replace registers
+"Plugin 'svermeulen/vim-cutlass'        " delete without replace registers
+Plugin 'voldikss/vim-floaterm'          " terminal flotante
 
 call vundle#end()

@@ -1,3 +1,9 @@
+let g:coc_status_error_sign = ''
+let g:coc_status_warning_sign = ''
+let g:coc_global_extensions = [
+    \ 'coc-tsserver'
+  \ ]
+
 " Mapeos
 inoremap <silent><expr> <TAB>
             \ pumvisible() ? "\<C-n>" :
@@ -47,6 +53,14 @@ function! s:show_documentation()
         execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+    let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+    let g:coc_global_extensions += ['coc-eslint']
+endif
 
 " Resaltar símbolo y referencias cuando se mantiene el cursor
 autocmd CursorHold * silent call CocActionAsync('highlight')
