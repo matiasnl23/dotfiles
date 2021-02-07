@@ -12,7 +12,11 @@ source ~/.config/nvim/projects.vim
 "filetype plugin indent on
 " theme
 "colorscheme onehalfdark
-colorscheme monokai_pro
+"colorscheme onehalflight
+"colorscheme monokai_pro
+colorscheme codedark
+"colorscheme embark
+
 let g:vim_monokai_tasty_italic = 1
 syntax on
 set cursorline

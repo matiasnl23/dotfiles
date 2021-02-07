@@ -34,6 +34,8 @@ Plugin 'sonph/onehalf', { 'rtp': 'vim' }
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'jacoborus/tender.vim'
 Plugin 'sainnhe/edge'
+Plugin 'tomasiser/vim-code-dark'
+Plugin 'dunstontc/vim-vscode-theme'
 
 " syntax
 "Plugin 'StanAngeloff/php.vim'                                          " sintaxis para PHP
@@ -78,5 +80,6 @@ Plugin 'preservim/tagbar'               " tagbar
 Plugin 'tpope/vim-repeat'               " repeat
 "Plugin 'svermeulen/vim-cutlass'        " delete without replace registers
 Plugin 'voldikss/vim-floaterm'          " terminal flotante
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
