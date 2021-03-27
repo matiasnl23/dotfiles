@@ -16,6 +16,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " themes
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'rakr/vim-one'
@@ -38,17 +39,18 @@ Plugin 'tomasiser/vim-code-dark'
 Plugin 'dunstontc/vim-vscode-theme'
 
 " syntax
+Plugin 'sheerun/vim-polyglot'
 "Plugin 'StanAngeloff/php.vim'                                          " sintaxis para PHP
 "Plugin 'jwalton512/vim-blade'                                          " sintaxis para Blade templates
-Plugin 'HerringtonDarkholme/yats.vim'                                   " sintaxis para Typescript
+""Plugin 'HerringtonDarkholme/yats.vim'                                   " sintaxis para Typescript
 "Plugin 'leafgarland/typescript-vim'
-Plugin 'pangloss/vim-javascript'                                        " sintaxis para javascript
-Plugin 'maxmellon/vim-jsx-pretty'                                       " sintaxis para jsx (react)
+""Plugin 'pangloss/vim-javascript'                                        " sintaxis para javascript
+""Plugin 'maxmellon/vim-jsx-pretty'                                       " sintaxis para jsx (react)
 "Plugin 'neovimhaskell/haskell-vim'                                     " sintaxis para haskell
-Plugin 'styled-components/vim-styled-components', { 'branch': 'main' }  " sintaxis para estilos dentro de js
+""Plugin 'styled-components/vim-styled-components', { 'branch': 'main' }  " sintaxis para estilos dentro de js
 "Plugin 'elzr/vim-json'                                                 " sintaxis para json
-Plugin 'jparise/vim-graphql'                                            " sintaxis para graphql
-Plugin 'dart-lang/dart-vim-plugin'
+""Plugin 'jparise/vim-graphql'                                            " sintaxis para graphql
+""Plugin 'dart-lang/dart-vim-plugin'
 
 " utils
 Plugin 'embear/vim-localvimrc'          " local vim
@@ -81,5 +83,6 @@ Plugin 'tpope/vim-repeat'               " repeat
 "Plugin 'svermeulen/vim-cutlass'        " delete without replace registers
 Plugin 'voldikss/vim-floaterm'          " terminal flotante
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'cohama/agit.vim'                " git utils
 
 call vundle#end()
